@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bach" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chuache" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-Qc-gCj">
+                                <rect key="frame" x="20" y="66" width="335" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="tvh-sK-ycM"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T3Y-sT-nmM">
+                                <rect key="frame" x="6" y="246" width="359" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="29X-c3-GQX"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eRZ-oK-GPU">
+                                <rect key="frame" x="6" y="301" width="359" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GpM-vg-Xjy"/>
+                                    <action selector="timeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="u4K-pf-9zP"/>
+                                </connections>
+                            </slider>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Az-Ul-7og">
+                                <rect key="frame" x="4" y="7" width="367" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8zW-Ck-Tfh"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Bach" id="KU1-eB-RYi"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owl-dI-uco">
+                                <rect key="frame" x="2" y="623" width="371" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uxG-RX-EI4"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Play" style="plain" id="MXd-OY-T3C">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TTq-Yb-1Ll">
+                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Play"/>
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Izh-ng-Rmp"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="efb-PI-M5K"/>
+                                    <barButtonItem title="Stop" id="qWn-27-3an">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="zL3-MS-p11"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Az-Ul-7og" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="7" id="3hJ-Dg-ba8"/>
+                            <constraint firstAttribute="trailing" secondItem="Owl-dI-uco" secondAttribute="trailing" constant="2" id="48c-P9-g2N"/>
+                            <constraint firstItem="T3Y-sT-nmM" firstAttribute="top" secondItem="Tt9-Qc-gCj" secondAttribute="bottom" constant="8" id="GYw-Rm-KYq"/>
+                            <constraint firstItem="T3Y-sT-nmM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="GbA-Ub-X8x"/>
+                            <constraint firstItem="0Az-Ul-7og" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4" id="H0b-sr-6bp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T3Y-sT-nmM" secondAttribute="trailing" constant="-4" id="IZ5-LK-VEX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eRZ-oK-GPU" secondAttribute="trailing" constant="-4" id="LVN-T8-QXj"/>
+                            <constraint firstItem="eRZ-oK-GPU" firstAttribute="top" secondItem="T3Y-sT-nmM" secondAttribute="bottom" constant="25" id="OkY-3B-nyN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tt9-Qc-gCj" secondAttribute="trailing" constant="4" id="PnB-Pt-bqL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Owl-dI-uco" secondAttribute="bottom" id="UdR-x7-l57"/>
+                            <constraint firstItem="Tt9-Qc-gCj" firstAttribute="top" secondItem="0Az-Ul-7og" secondAttribute="bottom" constant="15" id="XYh-UZ-o0P"/>
+                            <constraint firstAttribute="trailing" secondItem="0Az-Ul-7og" secondAttribute="trailing" constant="4" id="a6a-S0-4e0"/>
+                            <constraint firstItem="eRZ-oK-GPU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="lYq-zU-zg8"/>
+                            <constraint firstItem="Owl-dI-uco" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="2" id="qI2-C2-GaS"/>
+                            <constraint firstItem="Tt9-Qc-gCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="saF-BC-JdY"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playPause" destination="TTq-Yb-1Ll" id="2Md-aU-Y4M"/>
+                        <outlet property="slider" destination="eRZ-oK-GPU" id="AOK-Cj-vDW"/>
+                        <outlet property="toolbar" destination="Owl-dI-uco" id="dfs-Lh-oVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510.5" y="471.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chuache" width="236" height="324"/>
+    </resources>
+</document>
